@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && library src/** && exports lib/** types/** --main main",
+    "build": "tsc && library src/** && exports lib/** types/** --main App",
     "preview": "vite preview"
   },
   "dependencies": {
