@@ -1,7 +1,7 @@
 {
   "name": "@blue-express/react-package",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "This is a examle of how create a react package",
   "type": "module",
   "scripts": {
@@ -20,9 +20,9 @@
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
   },
-    "repository": {
-      "type": "git",
-      "url":"https://github.com/Blue-Express/bx-tmpl-github-package-node.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blue-Express/bx-tmpl-github-package-node.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
