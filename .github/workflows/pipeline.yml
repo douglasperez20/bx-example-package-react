@@ -1,0 +1,18 @@
+name: Blue Template - Github Package Node
+
+on:
+  push:
+    branches: [production]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: Blue-Express/bx_templates/.github/workflows/build-nodejs.yml@blue
+    with:
+      node-version: 16
+      description-pkg: "esto es un ejemplo package2"
+      publish-pkg: true
+      registry-pkg: "https://npm.pkg.github.com/"
+    secrets:
+      GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
