@@ -11,7 +11,7 @@ Este package tiene como finalidad facilitar la creación de aplicaciones client-
 
 ```bash
 ## Instalación de dependencias
-npm run i
+npm  i
 
 
 ## Servidor local de desarrollo
