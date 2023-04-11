@@ -1,18 +1,33 @@
 name: Blue Template - Github Package Node
 
 on:
-  push:
-    branches: [production]
-
-  workflow_dispatch:
+  release:
+    types: [created]
 
 jobs:
   build:
-    uses: Blue-Express/bx_templates/.github/workflows/build-nodejs.yml@blue
-    with:
-      node-version: 16
-      description-pkg: "esto es un ejemplo package2"
-      publish-pkg: true
-      registry-pkg: "https://npm.pkg.github.com/"
-    secrets:
-      GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18.x
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18.x
+          registry-url: https://npm.pkg.github.com/
+      #      ADD A COMMANDS TO BUILD THE PROJECT
+      #      - run: npm ci
+      - run: yarn install
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
