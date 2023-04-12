@@ -27,8 +27,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          publish-pkg: true
-          registry-pkg: https://npm.pkg.github.com/
+          registry-url: https://npm.pkg.github.com/
       #      ADD A COMMANDS TO BUILD THE PROJECT
       #      - run: npm ci
       - run: yarn install
