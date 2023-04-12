@@ -28,7 +28,7 @@
     "url": "https://github.com/douglasperez20/bx-example-package-react.git"
   },
   "publishConfig": {
-    "@douglaspr20:registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "types": "types/App.d.ts",
   "exports": {
