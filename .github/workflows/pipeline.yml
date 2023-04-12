@@ -31,7 +31,6 @@ jobs:
       #      ADD A COMMANDS TO BUILD THE PROJECT
       #      - run: npm ci
       - run: yarn install
-      - run: npm login --registry=https://npm.pkg.github.com --scope=@douglaspr20
-      - run: npm publish --access public
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
