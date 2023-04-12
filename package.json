@@ -1,6 +1,6 @@
 {
   "name": "@douglasperez20/bx-example-package-react",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "This is a examle of how create a react package",
   "type": "module",
   "scripts": {
