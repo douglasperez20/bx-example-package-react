@@ -22,12 +22,12 @@
     "vite": "^4.2.0"
   },
   "repository": {
+    "type": "git",
     "url": "https://github.com/douglasperez20/bx-example-package-react.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "license": "ISC",
   "types": "types/App.d.ts",
   "exports": {},
   "typesVersions": {
