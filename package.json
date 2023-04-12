@@ -1,6 +1,6 @@
 {
   "name": "@bx-test/bx-example-package-react",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "This is a examle of how create a react package",
   "type": "module",
   "scripts": {
