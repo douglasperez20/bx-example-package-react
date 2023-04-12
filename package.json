@@ -22,8 +22,7 @@
     "vite": "^4.2.0"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/Blue-Express/bx-tmpl-github-package-node.git"
+    "url": "https://github.com/douglasperez20/bx-example-package-react.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
