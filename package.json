@@ -1,6 +1,6 @@
 {
   "name": "bx-test-ktytdcnigb",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "This is a examle of how create a react package",
   "type": "module",
   "scripts": {
