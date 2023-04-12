@@ -1,5 +1,5 @@
 {
-  "name": "@douglaspr20/bx-example-package-react",
+  "name": "@douglasperez20/bx-example-package-react",
   "version": "1.0.0",
   "description": "This is a examle of how create a react package",
   "type": "module",
