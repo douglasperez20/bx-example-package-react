@@ -1,6 +1,5 @@
 {
   "name": "@douglaspr20/bx-example-package-react",
-  "private": true,
   "version": "1.0.0",
   "description": "This is a examle of how create a react package",
   "type": "module",
@@ -28,5 +27,18 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "license": "ISC",
+  "types": "types/App.d.ts",
+  "exports": {},
+  "typesVersions": {
+    "*": {
+      "App": [
+        "types/App.d.ts"
+      ],
+      "main": [
+        "types/main.d.ts"
+      ]
+    }
   }
 }
