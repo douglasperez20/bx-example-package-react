@@ -1,6 +1,6 @@
 {
   "name": "@douglasperez20/bx-example-package-react",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This is a examle of how create a react package",
   "type": "module",
   "scripts": {
@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@atomico/exports": "^1.4.2",
     "@atomico/vite": "^2.7.0",
+    "@types/bootstrap": "^5.2.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
@@ -29,7 +31,12 @@
     "@douglaspr20:registry": "https://npm.pkg.github.com"
   },
   "types": "types/App.d.ts",
-  "exports": {},
+  "exports": {
+    "./App": "./lib/App.js",
+    "./main": "./lib/main.js",
+    "./vite-env": "./lib/vite-env.js",
+    ".": "./lib/App.js"
+  },
   "typesVersions": {
     "*": {
       "App": [
@@ -39,5 +46,7 @@
         "types/main.d.ts"
       ]
     }
-  }
+  },
+  "main": "lib/App.js",
+  "module": "lib/App.js"
 }
