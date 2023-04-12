@@ -31,7 +31,12 @@
     "@douglaspr20:registry": "https://npm.pkg.github.com"
   },
   "types": "types/App.d.ts",
-  "exports": {},
+  "exports": {
+    "./App": "./lib/App.js",
+    "./main": "./lib/main.js",
+    "./vite-env": "./lib/vite-env.js",
+    ".": "./lib/App.js"
+  },
   "typesVersions": {
     "*": {
       "App": [
@@ -41,5 +46,7 @@
         "types/main.d.ts"
       ]
     }
-  }
+  },
+  "main": "lib/App.js",
+  "module": "lib/App.js"
 }
