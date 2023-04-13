@@ -3,6 +3,7 @@
   "version": "7.0.2",
   "description": "This is a examle of how create a react package",
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && library src/** && exports lib/** types/** --main App",
@@ -11,7 +12,8 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
     "@atomico/exports": "^1.4.2",
@@ -35,7 +37,10 @@
     "./App": "./lib/App.js",
     "./main": "./lib/main.js",
     "./vite-env": "./lib/vite-env.js",
-    ".": "./lib/App.js"
+    ".": "./lib/App.js",
+    "./custom": "./lib/custom.js",
+    "./components/DropdownItem": "./lib/components/DropdownItem.js",
+    "./components/DropdownMenu": "./lib/components/DropdownMenu.js"
   },
   "typesVersions": {
     "*": {
@@ -44,6 +49,12 @@
       ],
       "main": [
         "types/main.d.ts"
+      ],
+      "components/DropdownItem": [
+        "types/components/DropdownItem.d.ts"
+      ],
+      "components/DropdownMenu": [
+        "types/components/DropdownMenu.d.ts"
       ]
     }
   },

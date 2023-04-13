@@ -1,16 +1,15 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { ReactComponent as ReactLogo } from './assets/react.svg';
+import { ReactComponent as ViteLogo } from './assets/vite.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css';
 import './App.css';
+import DropdownMenu from './components/DropdownMenu';
 
 function App() {
   const [theme, setTheme] = useState<string | null>(null);
-  const resetTheme = () => {
-    setTheme(null);
-  };
+
   const themeClass = theme ? theme.toLowerCase() : 'secondary';
 
   return (
@@ -19,21 +18,13 @@ function App() {
         href='https://vitejs.dev'
         target='_blank'
       >
-        <img
-          src={viteLogo}
-          className='logo'
-          alt='Vite logo'
-        />
+        <ViteLogo style={{ width: 50, height: 50 }} />
       </a>
       <a
         href='https://reactjs.org'
         target='_blank'
       >
-        <img
-          src={reactLogo}
-          className='logo react'
-          alt='React logo'
-        />
+        <ReactLogo className='logo react' />
       </a>
       <h2>
         This is a example to create a npm package using React, Vite, Boostrap
@@ -59,34 +50,7 @@ function App() {
         >
           <span className='visually-hidden'>Toggle Dropdown</span>
         </button>
-        <div className='dropdown-menu'>
-          <a
-            className='dropdown-item'
-            onClick={() => setTheme('primary')}
-          >
-            Primary Theme
-          </a>
-          <a
-            className='dropdown-item'
-            onClick={() => setTheme('danger')}
-          >
-            Danger Theme
-          </a>
-          <a
-            className='dropdown-item'
-            onClick={() => setTheme('success')}
-          >
-            Success Theme
-          </a>
-          <div className='dropdown-divider'></div>
-          <a
-            className='dropdown-item'
-            href='#'
-            onClick={() => resetTheme()}
-          >
-            Default Theme
-          </a>
-        </div>
+        <DropdownMenu setState={setTheme} />
       </div>
     </div>
   );
