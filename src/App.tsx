@@ -3,8 +3,8 @@ import { ReactComponent as ReactLogo } from './assets/react.svg';
 import { ReactComponent as ViteLogo } from './assets/vite.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './index.css';
-import './App.css';
+import './css/index.css';
+import './css/App.css';
 import DropdownMenu from './components/DropdownMenu';
 
 function App() {
